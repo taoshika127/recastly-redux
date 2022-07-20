@@ -81,6 +81,7 @@ describe('reducers', function() {
       expect(postState.currentVideo).to.not.deep.equal(preState.currentVideo);
     });
     it('should be the result of invoking redux.combineReducers.', function() {
+      console.log('name', rootReducer.name);
       expect(rootReducer.name === 'combination').to.be.true;
     });
   });
