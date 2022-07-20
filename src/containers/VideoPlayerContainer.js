@@ -10,7 +10,6 @@ var mapDispatchToProps = (dispatch) => {
     handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video)),
   };
 };
-
 var VideoPlayerContainer = connect(mapStateToProps, mapDispatchToProps)(VideoPlayer);
 
 

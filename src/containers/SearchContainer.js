@@ -14,7 +14,7 @@ import handleSearchChange from '../actions/search.js';
 //state and dispatch mappings.
 
 var mapStateToProps = (state) => {
-  console.log('state is', state);
+  // console.log('state is', state);
   return {videoList: state.data};
 };
 var mapDispatchToProps = (dispatch) => {
@@ -22,7 +22,6 @@ var mapDispatchToProps = (dispatch) => {
     handleSearchInputChange: (q) => dispatch(handleSearchChange(q)),
   };
 };
-
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 export default SearchContainer;
