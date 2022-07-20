@@ -62,6 +62,7 @@ describe('containers', function() {
   describe('Video Player Container', function() {
     before(function () {
       component = shallowWithStore(<VideoPlayerContainer />, store);
+      console.log(component.prop('video'));
     });
     beforeEach(function() {
       store.dispatch.resetHistory();
