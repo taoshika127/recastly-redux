@@ -15,7 +15,7 @@ import handleSearchChange from '../actions/search.js';
 
 var mapStateToProps = (state) => {
   // console.log('state is', state);
-  return {videoList: state.data};
+  return {videoList: state.data, query: state.query};
 };
 var mapDispatchToProps = (dispatch) => {
   return {

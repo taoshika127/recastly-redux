@@ -10,7 +10,7 @@ var mapStateToProps = (state) => {
 };
 var mapDispatchToProps = (dispatch) => {
   return {
-    handleVideoListEntryTitleClick: (videos) => dispatch(changeVideoList(videos)),
+    handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video)),
     // videos: (video) => dispatch(changeVideoList(video)),
   };
 };
