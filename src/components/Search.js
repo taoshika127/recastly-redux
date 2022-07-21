@@ -11,11 +11,13 @@ class Search extends React.Component {
   }
 
   handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
+    console.log('target value', e.target.value);
     this.setState({
       value: e.target.value
     });
+    this.props.handleSearchInputChange(e.target.value);
   }
+
 
   render() {
     console.log('searchevent', this.props);
@@ -25,9 +27,9 @@ class Search extends React.Component {
           className="form-control"
           type="text"
           value={this.props.query}
-          onChange={this.props.handleSearchInputChange.bind(this)}
+          onClick={this.handleInputChange.bind(this)} //update props.data to be the new search result based on q
         />
-        <button className="btn hidden-sm-down" onClick={console.log('button clicked', event)}>
+        <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
         </button>
       </div>

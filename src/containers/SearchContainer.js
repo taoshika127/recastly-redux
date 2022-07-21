@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Search from './../components/Search.js';
-import handleSearchChange from '../actions/search.js';
+import handleVideoSearch from '../actions/search.js';
 
 //function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
 // var mapStateToProps = (state) => ({});
@@ -12,14 +12,15 @@ import handleSearchChange from '../actions/search.js';
 // dispatchers with your search component props.
 //HINT: use react-redux 'connect' method to generate a container component from
 //state and dispatch mappings.
+//handleSearchChange
 
 var mapStateToProps = (state) => {
   // console.log('state is', state);
-  return {videoList: state.data, query: state.query};
+  return {videoList: state.data, query: state.query}; //do not need query
 };
 var mapDispatchToProps = (dispatch) => {
   return {
-    handleSearchInputChange: (q) => dispatch(handleSearchChange(q)),
+    handleSearchInputChange: (q) => dispatch(handleVideoSearch(q)),
   };
 };
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
