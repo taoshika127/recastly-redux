@@ -18,9 +18,8 @@ class Search extends React.Component {
     this.props.handleSearchInputChange(e.target.value);
   }
 
-
   render() {
-    console.log('searchevent', this.props);
+    console.log('props', this.props.handleSearchInputChange);
     return (
       <div className="search-bar form-inline">
         <input

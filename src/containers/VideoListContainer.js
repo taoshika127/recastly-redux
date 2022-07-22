@@ -5,7 +5,6 @@ import changeVideoList from './../actions/videoList';
 
 var VideoListContainer = () => {};
 var mapStateToProps = (state) => {
-  console.log('state is', state);
   return {videos: state.videoList};
 };
 var mapDispatchToProps = (dispatch) => {

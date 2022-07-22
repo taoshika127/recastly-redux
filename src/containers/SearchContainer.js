@@ -15,14 +15,15 @@ import handleVideoSearch from '../actions/search.js';
 //handleSearchChange
 
 var mapStateToProps = (state) => {
-  // console.log('state is', state);
   return {videoList: state.data, query: state.query}; //do not need query
 };
-var mapDispatchToProps = (dispatch) => {
-  return {
-    handleSearchInputChange: (q) => dispatch(handleVideoSearch(q)),
-  };
-};
+// var mapDispatchToProps = (dispatch) => (
+//   {handleSearchInputChange: (q) => {
+//     dispatch(handleVideoSearch(q));
+//   }
+//   }
+// );
+var mapDispatchToProps = {handleSearchInputChange: handleVideoSearch};
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 export default SearchContainer;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import VideoListEntry from './VideoListEntry.js';
 
 var VideoList = ({videos, handleVideoListEntryTitleClick}) => {
-  console.log('videos---->', videos);
+  console.log('videos---->', videos, handleVideoListEntryTitleClick);
   return (<div className="video-list">
     {
       videos.map(video => (
